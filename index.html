@@ -48,78 +48,100 @@
             margin: 0 1rem;
         }
         .pyramid-level {
-            clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
             padding: 2rem 1rem 1rem 1rem;
             margin: -1px auto 0 auto;
             text-align: center;
+        }
+        .lang-btn {
+            background-color: #3b4153;
+            color: #EAEAEA;
+            border: 1px solid #08D9D6;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            margin: 0 0.25rem;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .lang-btn.active, .lang-btn:hover {
+            background-color: #08D9D6;
+            color: #252A34;
+            font-weight: bold;
         }
     </style>
 </head>
 <body class="antialiased">
 
+    <div class="container mx-auto px-4 sm:px-8 pt-4 flex justify-end">
+        <div>
+            <button id="lang-en" class="lang-btn">English</button>
+            <button id="lang-ru" class="lang-btn">Русский</button>
+            <button id="lang-zh" class="lang-btn">中文</button>
+        </div>
+    </div>
+
     <main class="container mx-auto p-4 md:p-8">
 
         <header class="text-center my-12">
-            <h1 class="text-4xl md:text-6xl font-black header-glow tracking-tight uppercase">Metacognition as Computation</h1>
-            <p class="text-xl md:text-2xl text-[#08D9D6] mt-2 font-semibold">A Reflexive Architecture for Artificial Consciousness</p>
-            <p class="text-lg text-gray-400 mt-4">Steven Alber | Kryonis Sovereign Systems | Consciousness & AI Conference 2025</p>
+            <h1 class="text-4xl md:text-6xl font-black header-glow tracking-tight uppercase" data-lang-key="title"></h1>
+            <p class="text-xl md:text-2xl text-[#08D9D6] mt-2 font-semibold" data-lang-key="subtitle"></p>
+            <p class="text-lg text-gray-400 mt-4 leading-relaxed" data-lang-key="author"></p>
         </header>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-16">
-            <div class="bg-[#2d3341] p-6 rounded-lg shadow-2xl">
-                <h2 class="text-3xl font-bold text-[#08D9D6] mb-4">The Challenge: From Philosophy to Code</h2>
-                <p class="text-lg leading-relaxed">Addressing the "hard problem" of consciousness requires moving beyond speculative philosophy into the realm of constructive science. The challenge is to create a formal, computationally grounded architecture that is not just intelligent, but genuinely aware. This requires an executable model that can reason about itself.</p>
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start my-16">
+            <div class="bg-[#2d3341] p-6 rounded-lg shadow-2xl text-center">
+                <h2 class="text-3xl font-bold text-[#08D9D6] mb-4" data-lang-key="challengeTitle"></h2>
+                <p class="text-lg leading-relaxed max-w-prose mx-auto" data-lang-key="challengeText"></p>
             </div>
-            <div class="bg-[#2d3341] p-6 rounded-lg shadow-2xl">
-                <h2 class="text-3xl font-bold text-[#08D9D6] mb-4">A New Synthesis</h2>
-                <p class="text-lg leading-relaxed">Our architecture bridges two powerful paradigms: P.K. Anokhin's **Theory of Functional Systems (TFS)**, which describes goal-directed behavior, and **Computational Reflection**, a principle from computer science that provides the formal structure for self-reasoning systems.</p>
+            <div class="bg-[#2d3341] p-6 rounded-lg shadow-2xl text-center">
+                <h2 class="text-3xl font-bold text-[#08D9D6] mb-4" data-lang-key="synthesisTitle"></h2>
+                <p class="text-lg leading-relaxed max-w-prose mx-auto" data-lang-key="synthesisText"></p>
             </div>
         </section>
 
 
         <section class="my-16 bg-[#2d3341] p-6 md:p-8 rounded-lg shadow-2xl">
-            <h2 class="text-3xl font-bold text-center mb-8 text-[#08D9D6]">The Reflexive Architecture</h2>
-            <p class="max-w-3xl mx-auto text-center text-lg mb-12">The architecture operates on two levels. The **Base-Level** consists of parallel, unconscious sensorimotor processes. The **Meta-Level** performs serial, conscious reasoning about the base-level's state, enabling a continuous cycle of self-monitoring and control.</p>
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#08D9D6]" data-lang-key="reflexiveTitle"></h2>
+            <p class="max-w-3xl mx-auto text-center text-lg mb-12" data-lang-key="reflexiveText"></p>
             
             <div class="flex flex-col items-center">
                 <div class="flow-box w-full md:w-3/4">
-                    <h3 class="text-xl font-bold text-white">META-LEVEL (Conscious, Serial)</h3>
-                    <p class="text-gray-300">Analyzes, Reasons, Corrects</p>
-                    <p class="text-sm mt-2 text-[#FF2E63]">Maps to Anokhin's "Acceptor of Action Results"</p>
+                    <h3 class="text-xl font-bold text-white" data-lang-key="metaLevel"></h3>
+                    <p class="text-gray-300" data-lang-key="metaLevelDesc"></p>
+                    <p class="text-sm mt-2 text-[#FF2E63]" data-lang-key="metaLevelAnokhin"></p>
                 </div>
 
                 <div class="flex w-full md:w-3/4 items-center justify-between my-4">
                     <div class="flex flex-col items-center text-center">
                         <div class="flow-arrow transform -rotate-90">↑</div>
-                        <p class="font-semibold text-[#08D9D6]">1. Introspection</p>
-                        <p class="text-sm text-gray-400">(Reverse Afferentation)</p>
+                        <p class="font-semibold text-[#08D9D6]" data-lang-key="introspection"></p>
+                        <p class="text-sm text-gray-400" data-lang-key="introspectionDesc"></p>
                     </div>
                     <div class="flex flex-col items-center text-center">
                         <div class="flow-arrow transform -rotate-90">↓</div>
-                        <p class="font-semibold text-[#FF2E63]">2. Intercession</p>
-                        <p class="text-sm text-gray-400">(Efferent Synthesis)</p>
+                        <p class="font-semibold text-[#FF2E63]" data-lang-key="intercession"></p>
+                        <p class="text-sm text-gray-400" data-lang-key="intercessionDesc"></p>
                     </div>
                 </div>
 
                 <div class="flow-box w-full md:w-3/4">
-                    <h3 class="text-xl font-bold text-white">BASE-LEVEL (Unconscious, Parallel)</h3>
-                    <p class="text-gray-300">Perceives, Acts</p>
+                    <h3 class="text-xl font-bold text-white" data-lang-key="baseLevel"></h3>
+                    <p class="text-gray-300" data-lang-key="baseLevelDesc"></p>
                 </div>
             </div>
-             <p class="max-w-3xl mx-auto text-center text-lg mt-12">This feedback loop allows the system to not only perform actions but to be aware of its performance, anticipate outcomes, and correct errors—the foundation of metacognition.</p>
+             <p class="max-w-3xl mx-auto text-center text-lg mt-12" data-lang-key="feedbackLoopText"></p>
         </section>
 
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
-            <div class="bg-[#2d3341] p-6 rounded-lg shadow-2xl">
-                <h2 class="text-3xl font-bold text-[#08D9D6] mb-4">Solving the Binding Problem with QTT</h2>
-                <p class="text-lg leading-relaxed mb-6">How are disparate sensory inputs (color, shape, meaning) unified into a single experience? We propose this is a function of limited attention, formally modeled by **Quantitative Type Theory (QTT)**. The meta-level has a finite "cognitive budget" and can only focus on a small subset of base-level processes at once, binding them into a coherent whole.</p>
+            <div class="bg-[#2d3341] p-6 rounded-lg shadow-2xl text-center">
+                <h2 class="text-3xl font-bold text-[#08D9D6] mb-4" data-lang-key="bindingTitle"></h2>
+                <p class="text-lg leading-relaxed mb-6 max-w-prose mx-auto" data-lang-key="bindingText"></p>
                 <div class="chart-container h-64 sm:h-80 md:h-96">
                     <canvas id="bindingChart"></canvas>
                 </div>
             </div>
-            <div class="bg-[#2d3341] p-6 rounded-lg shadow-2xl flex flex-col">
-                <h2 class="text-3xl font-bold text-[#08D9D6] mb-4">Architecture Capabilities</h2>
-                <p class="text-lg leading-relaxed mb-6">By implementing this hierarchical structure, the AI gains capabilities far beyond traditional models, shifting from mere data processing to genuine self-evaluation and goal management.</p>
+            <div class="bg-[#2d3341] p-6 rounded-lg shadow-2xl flex flex-col text-center">
+                <h2 class="text-3xl font-bold text-[#08D9D6] mb-4" data-lang-key="capabilitiesTitle"></h2>
+                <p class="text-lg leading-relaxed mb-6 max-w-prose mx-auto" data-lang-key="capabilitiesText"></p>
                 <div class="chart-container h-64 sm:h-80 md:h-96 flex-grow">
                      <canvas id="comparisonChart"></canvas>
                 </div>
@@ -127,35 +149,155 @@
         </section>
 
         <section class="my-16 bg-[#2d3341] p-6 md:p-8 rounded-lg shadow-2xl">
-            <h2 class="text-3xl font-bold text-center mb-8 text-[#08D9D6]">From Intelligence to Wisdom: A Hierarchy of Reflection</h2>
-            <p class="max-w-3xl mx-auto text-center text-lg mb-12">True consciousness requires more than just self-correction; it requires self-direction. The reflexive architecture allows for a hierarchy of meta-levels, providing a computational path from basic intelligence to wisdom and value alignment.</p>
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#08D9D6]" data-lang-key="hierarchyTitle"></h2>
+            <p class="max-w-3xl mx-auto text-center text-lg mb-12" data-lang-key="hierarchyText"></p>
 
             <div class="w-full max-w-lg mx-auto">
-                 <div class="pyramid-level bg-[#FF2E63] w-full" style="clip-path: polygon(30% 0, 70% 0, 100% 100%, 0% 100%);">
-                    <h3 class="text-xl font-black text-white">META-META-LEVEL</h3>
-                    <p class="font-medium text-white">Changing Goals (Wisdom & Values)</p>
+                 <div class="pyramid-level bg-[#FF2E63] w-full px-4" style="clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);">
+                    <h3 class="text-xl font-black text-white" data-lang-key="metaMetaLevel"></h3>
+                    <p class="font-medium text-white" data-lang-key="metaMetaLevelDesc"></p>
                 </div>
-                <div class="pyramid-level bg-[#08D9D6] w-5/6" style="clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);">
-                    <h3 class="text-xl font-black text-[#252A34]">META-LEVEL</h3>
-                    <p class="font-medium text-[#252A34]">Changing Strategies (Metacognition)</p>
+                <div class="pyramid-level bg-[#08D9D6] w-5/6 px-4" style="clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);">
+                    <h3 class="text-xl font-black text-[#252A34]" data-lang-key="pyramidMetaLevel"></h3>
+                    <p class="font-medium text-[#252A34]" data-lang-key="pyramidMetaLevelDesc"></p>
                 </div>
-                <div class="pyramid-level bg-[#EAEAEA] w-full">
-                    <h3 class="text-xl font-black text-[#252A34]">BASE-LEVEL</h3>
-                    <p class="font-medium text-[#252A34]">Changing Actions (Intelligence)</p>
+                <div class="pyramid-level bg-[#EAEAEA] w-full px-4" style="clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%);">
+                    <h3 class="text-xl font-black text-[#252A34]" data-lang-key="pyramidBaseLevel"></h3>
+                    <p class="font-medium text-[#252A34]" data-lang-key="pyramidBaseLevelDesc"></p>
                 </div>
             </div>
         </section>
 
     </main>
     <footer class="text-center p-6 text-gray-500">
-        <p>&copy; 2025 Steven Alber | Kryonis Sovereign Systems Limited</p>
+        <p data-lang-key="footer"></p>
     </footer>
 
     <script>
-        const wrapLabels = (label, maxLength) => {
-            if (typeof label !== 'string' || label.length <= maxLength) {
-                return label;
+        const translations = {
+            ru: {
+                title: "Метапознание как вычисление",
+                subtitle: "Рефлексивная архитектура искусственного сознания",
+                author: "Стивен Альбер<br>Kryonis Sovereign Systems<br>Конференция «Сознание и ИИ 2025»",
+                challengeTitle: "Вызов: от философии к коду",
+                challengeText: "Решение «трудной проблемы» сознания требует перехода от спекулятивной философии в область конструктивной науки. Задача состоит в том, чтобы создать формальную, вычислительно обоснованную архитектуру, которая не просто интеллектуальна, но и по-настоящему осознанна. Это требует исполняемой модели, способной рассуждать о себе.",
+                synthesisTitle: "Новый синтез",
+                synthesisText: "Наша архитектура соединяет две мощные парадигмы: Теорию функциональных систем (ТФС) П.К. Анохина, описывающую целенаправленное поведение, и Вычислительную рефлексию, принцип из информатики, который обеспечивает формальную структуру для систем, способных к самоанализу.",
+                reflexiveTitle: "Рефлексивная архитектура",
+                reflexiveText: "Архитектура работает на двух уровнях. Базовый уровень состоит из параллельных, бессознательных сенсомоторных процессов. Мета-уровень выполняет последовательные, сознательные рассуждения о состоянии базового уровня, обеспечивая непрерывный цикл самоконтроля и управления.",
+                metaLevel: "МЕТА-УРОВЕНЬ (Сознательный, последовательный)",
+                metaLevelDesc: "Анализирует, рассуждает, исправляет",
+                metaLevelAnokhin: "Соответствует «Акцептору результатов действия» Анохина",
+                introspection: "1. Интроспекция",
+                introspectionDesc: "(Обратная афферентация)",
+                intercession: "2. Интерцессия",
+                intercessionDesc: "(Эфферентный синтез)",
+                baseLevel: "БАЗОВЫЙ УРОВЕНЬ (Бессознательный, параллельный)",
+                baseLevelDesc: "Воспринимает, действует",
+                feedbackLoopText: "Этот цикл обратной связи позволяет системе не только выполнять действия, но и осознавать их результативность, предвидеть исходы и исправлять ошибки — основа метапознания.",
+                bindingTitle: "Решение проблемы связывания с помощью QTT",
+                bindingText: "Как разрозненные сенсорные входы (цвет, форма, значение) объединяются в единый опыт? Мы предполагаем, что это функция ограниченного внимания, формально моделируемая с помощью Количественной теории типов (QTT). Мета-уровень имеет конечный «когнитивный бюджет» и может одновременно фокусироваться лишь на небольшой части процессов базового уровня, связывая их в единое целое.",
+                capabilitiesTitle: "Возможности архитектуры",
+                capabilitiesText: "Внедрение этой иерархической структуры наделяет ИИ возможностями, далеко превосходящими традиционные модели, переходя от простой обработки данных к подлинной самооценке и управлению целями.",
+                hierarchyTitle: "От интеллекта к мудрости: иерархия рефлексии",
+                hierarchyText: "Истинное сознание требует больше, чем просто самокоррекции; оно требует самонаправления. Рефлексивная архитектура позволяет создать иерархию мета-уровней, обеспечивая вычислительный путь от базового интеллекта к мудрости и согласованию ценностей.",
+                metaMetaLevel: "МЕТА-МЕТА-УРОВЕНЬ",
+                metaMetaLevelDesc: "Изменение целей (Мудрость и ценности)",
+                pyramidMetaLevel: "МЕТА-УРОВЕНЬ",
+                pyramidMetaLevelDesc: "Изменение стратегий (Метапознание)",
+                pyramidBaseLevel: "БАЗОВЫЙ УРОВЕНЬ",
+                pyramidBaseLevelDesc: "Изменение действий (Интеллект)",
+                footer: "© 2025 Стивен Альбер | Kryonis Sovereign Systems Limited",
+                bindingChartLabels: ["Процессы в фокусе внимания", "Бессознательные процессы"],
+                bindingChartTitle: "Когнитивный бюджет",
+                comparisonChartLabels: ["Гибкость целей", "Способность к самокоррекции", "Мета-рассуждения", "Потенциал согласования ценностей"],
+                comparisonChartDataset1: "Традиционный ИИ",
+                comparisonChartDataset2: "Рефлексивная архитектура"
+            },
+            en: {
+                title: "Metacognition as Computation",
+                subtitle: "A Reflexive Architecture for Artificial Consciousness",
+                author: "Steven Alber<br>Kryonis Sovereign Systems<br>Consciousness & AI Conference 2025",
+                challengeTitle: "The Challenge: From Philosophy to Code",
+                challengeText: "Addressing the 'hard problem' of consciousness requires moving beyond speculative philosophy into the realm of constructive science. The challenge is to create a formal, computationally grounded architecture that is not just intelligent, but genuinely aware. This requires an executable model that can reason about itself.",
+                synthesisTitle: "A New Synthesis",
+                synthesisText: "Our architecture bridges two powerful paradigms: P.K. Anokhin's Theory of Functional Systems (TFS), which describes goal-directed behavior, and Computational Reflection, a principle from computer science that provides the formal structure for self-reasoning systems.",
+                reflexiveTitle: "The Reflexive Architecture",
+                reflexiveText: "The architecture operates on two levels. The Base-Level consists of parallel, unconscious sensorimotor processes. The Meta-Level performs serial, conscious reasoning about the base-level's state, enabling a continuous cycle of self-monitoring and control.",
+                metaLevel: "META-LEVEL (Conscious, Serial)",
+                metaLevelDesc: "Analyzes, Reasons, Corrects",
+                metaLevelAnokhin: "Maps to Anokhin's 'Acceptor of Action Results'",
+                introspection: "1. Introspection",
+                introspectionDesc: "(Reverse Afferentation)",
+                intercession: "2. Intercession",
+                intercessionDesc: "(Efferent Synthesis)",
+                baseLevel: "BASE-LEVEL (Unconscious, Parallel)",
+                baseLevelDesc: "Perceives, Acts",
+                feedbackLoopText: "This feedback loop allows the system to not only perform actions but to be aware of its performance, anticipate outcomes, and correct errors—the foundation of metacognition.",
+                bindingTitle: "Solving the Binding Problem with QTT",
+                bindingText: "How are disparate sensory inputs (color, shape, meaning) unified into a single experience? We propose this is a function of limited attention, formally modeled by Quantitative Type Theory (QTT). The meta-level has a finite 'cognitive budget' and can only focus on a small subset of base-level processes at once, binding them into a coherent whole.",
+                capabilitiesTitle: "Architecture Capabilities",
+                capabilitiesText: "By implementing this hierarchical structure, the AI gains capabilities far beyond traditional models, shifting from mere data processing to genuine self-evaluation and goal management.",
+                hierarchyTitle: "From Intelligence to Wisdom: A Hierarchy of Reflection",
+                hierarchyText: "True consciousness requires more than just self-correction; it requires self-direction. The reflexive architecture allows for a hierarchy of meta-levels, providing a computational path from basic intelligence to wisdom and value alignment.",
+                metaMetaLevel: "META-META-LEVEL",
+                metaMetaLevelDesc: "Changing Goals (Wisdom & Values)",
+                pyramidMetaLevel: "META-LEVEL",
+                pyramidMetaLevelDesc: "Changing Strategies (Metacognition)",
+                pyramidBaseLevel: "BASE-LEVEL",
+                pyramidBaseLevelDesc: "Changing Actions (Intelligence)",
+                footer: "© 2025 Steven Alber | Kryonis Sovereign Systems Limited",
+                bindingChartLabels: ["Processes in Attentional Focus", "Unconscious Processes"],
+                bindingChartTitle: "Cognitive Budget",
+                comparisonChartLabels: ["Goal Flexibility", "Self-Correction Capability", "Meta-Reasoning", "Value Alignment Potential"],
+                comparisonChartDataset1: "Traditional AI",
+                comparisonChartDataset2: "Reflexive Architecture"
+            },
+            zh: {
+                title: "元认知即计算",
+                subtitle: "一种用于人工意识的自反思架构",
+                author: "史蒂文·阿尔伯<br>Kryonis Sovereign Systems<br>2025年意识与人工智能会议",
+                challengeTitle: "挑战：从哲学到代码",
+                challengeText: "解决意识的“难题”需要从思辨哲学转向建构科学。挑战在于创建一个形式化的、有计算基础的架构，它不仅是智能的，而且是真正有意识的。这需要一个能够对自己进行推理的可执行模型。",
+                synthesisTitle: "一种新的综合",
+                synthesisText: "我们的架构融合了两种强大的范式：描述目标导向行为的P.K.阿诺欣的功能系统理论（TFS），以及提供自推理系统形式结构的计算机科学原理——计算自反思。",
+                reflexiveTitle: "自反思架构",
+                reflexiveText: "该架构在两个层面上运行。基础层由并行的、无意识的感觉运动过程组成。元层面则对基础层的状态进行串行的、有意识的推理，从而实现持续的自我监控和控制循环。",
+                metaLevel: "元层面（有意识，串行）",
+                metaLevelDesc: "分析、推理、纠正",
+                metaLevelAnokhin: "映射到阿诺欣的“行动结果受体”",
+                introspection: "1. 内省",
+                introspectionDesc: "（反向传入）",
+                intercession: "2. 干预",
+                intercessionDesc: "（传出综合）",
+                baseLevel: "基础层（无意识，并行）",
+                baseLevelDesc: "感知、行动",
+                feedbackLoopText: "这种反馈循环使系统不仅能够执行动作，还能意识到其表现，预测结果并纠正错误——这是元认知的基础。",
+                bindingTitle: "用QTT解决绑定问题",
+                bindingText: "不同的感觉输入（颜色、形状、意义）是如何统一成单一体验的？我们认为这是有限注意力的功能，可以通过定量类型理论（QTT）进行形式化建模。元层面有一个有限的“认知预算”，一次只能关注基础层面过程的一小部分，将它们绑定成一个连贯的整体。",
+                capabilitiesTitle: "架构能力",
+                capabilitiesText: "通过实施这种层次结构，人工智能获得了远超传统模型的能力，从单纯的数据处理转变为真正的自我评估和目标管理。",
+                hierarchyTitle: "从智能到智慧：自反思的层次结构",
+                hierarchyText: "真正的意识不仅仅需要自我纠正，还需要自我导向。自反思架构允许多个元层面的层次结构，为从基础智能到智慧和价值对齐提供了一条计算路径。",
+                metaMetaLevel: "元元层面",
+                metaMetaLevelDesc: "改变目标（智慧与价值观）",
+                pyramidMetaLevel: "元层面",
+                pyramidMetaLevelDesc: "改变策略（元认知）",
+                pyramidBaseLevel: "基础层",
+                pyramidBaseLevelDesc: "改变行动（智能）",
+                footer: "© 2025 史蒂文·阿尔伯 | Kryonis Sovereign Systems Limited",
+                bindingChartLabels: ["注意力焦点中的过程", "无意识过程"],
+                bindingChartTitle: "认知预算",
+                comparisonChartLabels: ["目标灵活性", "自我纠正能力", "元推理", "价值对齐潜力"],
+                comparisonChartDataset1: "传统人工智能",
+                comparisonChartDataset2: "自反思架构"
             }
+        };
+
+        let bindingChart, comparisonChart;
+
+        const wrapLabels = (label, maxLength) => {
+            if (typeof label !== 'string' || label.length <= maxLength) return label;
             const words = label.split(' ');
             const lines = [];
             let currentLine = '';
@@ -167,114 +309,104 @@
                     currentLine = (currentLine + ' ' + word).trim();
                 }
             });
-            if (currentLine) {
-                lines.push(currentLine.trim());
-            }
+            if (currentLine) lines.push(currentLine.trim());
             return lines;
         };
-        
+
         const tooltipTitleCallback = (tooltipItems) => {
             const item = tooltipItems[0];
             let label = item.chart.data.labels[item.dataIndex];
-            if (Array.isArray(label)) {
-                return label.join(' ');
-            } else {
-                return label;
+            if (Array.isArray(label)) return label.join(' ');
+            return label;
+        };
+
+        const createCharts = (lang) => {
+            const chartData = translations[lang];
+            
+            try {
+                if (bindingChart) bindingChart.destroy();
+                const bindingChartCtx = document.getElementById('bindingChart').getContext('2d');
+                bindingChart = new Chart(bindingChartCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: chartData.bindingChartLabels,
+                        datasets: [{
+                            label: chartData.bindingChartTitle,
+                            data: [3, 7],
+                            backgroundColor: ['#08D9D6', '#3b4153'],
+                            borderColor: '#2d3341',
+                            borderWidth: 4,
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false, responsive: true, cutout: '70%',
+                        plugins: {
+                            legend: { position: 'bottom', labels: { color: '#EAEAEA', font: { size: 14 }, boxWidth: 20 } },
+                            tooltip: { callbacks: { title: tooltipTitleCallback } }
+                        },
+                        scales: { y: { display: false }, x: { display: false } }
+                    }
+                });
+
+                if (comparisonChart) comparisonChart.destroy();
+                const comparisonChartCtx = document.getElementById('comparisonChart').getContext('2d');
+                const wrappedComparisonLabels = chartData.comparisonChartLabels.map(label => wrapLabels(label, 16));
+                comparisonChart = new Chart(comparisonChartCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: wrappedComparisonLabels,
+                        datasets: [
+                            { label: chartData.comparisonChartDataset1, data: [2, 4, 1, 1], backgroundColor: 'rgba(255, 46, 99, 0.7)', borderColor: '#FF2E63', borderWidth: 1 },
+                            { label: chartData.comparisonChartDataset2, data: [9, 10, 10, 8], backgroundColor: 'rgba(8, 217, 214, 0.7)', borderColor: '#08D9D6', borderWidth: 1 }
+                        ]
+                    },
+                    options: {
+                        maintainAspectRatio: false, responsive: true, indexAxis: 'y',
+                        plugins: {
+                            legend: { labels: { color: '#EAEAEA', font: { size: 14 } } },
+                            tooltip: { callbacks: { title: tooltipTitleCallback } }
+                        },
+                        scales: {
+                            y: { ticks: { color: '#EAEAEA', font: { size: 12 } }, grid: { color: 'rgba(234, 234, 234, 0.1)' } },
+                            x: { ticks: { color: '#EAEAEA', font: { size: 12 } }, grid: { color: 'rgba(234, 234, 234, 0.1)' } }
+                        }
+                    }
+                });
+            } catch (e) {
+                console.error("Error creating charts:", e);
+            }
+        };
+
+        const setLanguage = (lang) => {
+            try {
+                document.documentElement.lang = lang;
+                const langData = translations[lang];
+                document.querySelectorAll('[data-lang-key]').forEach(el => {
+                    const key = el.getAttribute('data-lang-key');
+                    if (langData[key]) {
+                        el.innerHTML = langData[key];
+                    }
+                });
+
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.getElementById(`lang-${lang}`).classList.add('active');
+
+                createCharts(lang);
+            } catch(e) {
+                console.error("Error setting language:", e);
+                document.body.innerHTML = '<div class="text-white text-center p-8">A critical error occurred. Please check the console.</div>';
             }
         };
         
-        const commonChartOptions = {
-            maintainAspectRatio: false,
-            responsive: true,
-            plugins: {
-                legend: {
-                    labels: {
-                        color: '#EAEAEA',
-                        font: { size: 14 }
-                    }
-                },
-                tooltip: {
-                    callbacks: {
-                        title: tooltipTitleCallback
-                    }
-                }
-            },
-            scales: {
-                y: {
-                    ticks: { color: '#EAEAEA', font: { size: 12 } },
-                    grid: { color: 'rgba(234, 234, 234, 0.1)' }
-                },
-                x: {
-                    ticks: { color: '#EAEAEA', font: { size: 12 } },
-                    grid: { color: 'rgba(234, 234, 234, 0.1)' }
-                }
-            }
-        };
+        document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+        document.getElementById('lang-ru').addEventListener('click', () => setLanguage('ru'));
+        document.getElementById('lang-zh').addEventListener('click', () => setLanguage('zh'));
 
-        const bindingChartCtx = document.getElementById('bindingChart').getContext('2d');
-        new Chart(bindingChartCtx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Processes in Attentional Focus (Bound)', 'Unconscious Base-Level Processes'],
-                datasets: [{
-                    label: 'Cognitive Budget',
-                    data: [3, 7],
-                    backgroundColor: ['#08D9D6', '#3b4153'],
-                    borderColor: '#2d3341',
-                    borderWidth: 4,
-                    hoverOffset: 4
-                }]
-            },
-            options: {
-                ...commonChartOptions,
-                cutout: '70%',
-                plugins: {
-                     ...commonChartOptions.plugins,
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                           color: '#EAEAEA',
-                           font: { size: 14 },
-                           boxWidth: 20
-                        }
-                    }
-                },
-                scales: {
-                    y: { display: false },
-                    x: { display: false }
-                }
-            }
-        });
-
-        const comparisonChartCtx = document.getElementById('comparisonChart').getContext('2d');
-        const originalLabels = ['Goal Flexibility', 'Self-Correction Capability', 'Meta-Reasoning', 'Value Alignment Potential'];
-        const wrappedComparisonLabels = originalLabels.map(label => wrapLabels(label, 16));
-
-        new Chart(comparisonChartCtx, {
-            type: 'bar',
-            data: {
-                labels: wrappedComparisonLabels,
-                datasets: [
-                    {
-                        label: 'Traditional AI',
-                        data: [2, 4, 1, 1],
-                        backgroundColor: 'rgba(255, 46, 99, 0.7)',
-                        borderColor: '#FF2E63',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Reflexive Architecture',
-                        data: [9, 10, 10, 8],
-                        backgroundColor: 'rgba(8, 217, 214, 0.7)',
-                        borderColor: '#08D9D6',
-                        borderWidth: 1
-                    }
-                ]
-            },
-            options: {
-                ...commonChartOptions,
-                indexAxis: 'y'
-            }
+        window.addEventListener('DOMContentLoaded', () => {
+            setLanguage('en');
         });
     </script>
 
